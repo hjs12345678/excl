@@ -1,0 +1,14 @@
+mybatis:
+  mapper-locations: mybatisX/*.xml
+  configuration:
+    default-statement-timeout: 5
+spring:
+  datasource:
+    username: ssp
+    password: ssp_test
+    url: jdbc:oracle:thin:@172.16.136.252:1521/ntestdb
+    #&allowPublicKeyRetrieval=true
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    type: org.apache.tomcat.jdbc.pool.DataSource
+
+

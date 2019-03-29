@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.excl.mapper.SspOrgMapper">
+	<resultMap id="Result" type="com.example.excl.domain.Org">
+		<result property="orgUuid" column="ORG_UUID" />
+		<result property="orgNm" column="ORG_NM" />
+		<result property="orgSts" column="ORG_STS" />
+		<result property="cityCd" column="CITY_CD" />
+		<result property="cityNm" column="CITY_NM" />
+		<result property="orgAddr" column="ORG_ADDR" />
+		<result property="orgZip" column="ORG_ZIP" />
+		<result property="orgTelNo" column="ORG_TEL_NO" />
+		<!-- 机构电话密文脱敏 -->
+		<result property="orgTelNoEncrypt" column="ORG_TEL_NO_ENCRYPT" />
+		<result property="orgFax" column="ORG_FAX" />
+		<result property="contact" column="CONTACT" />
+		<result property="contactTelNo" column="CONTACT_TEL_NO" />
+		<!-- 联系人电话密文 -->
+		<result property="contactTelNoEncrypt" column="CONTACT_TEL_NO_ENCRYPT" />
+		<result property="contactMail" column="CONTACT_MAIL" />
+		<result property="activeFlg" column="ACTIVE_FLG" />
+		<result property="createdStaffId" column="CREATED_STAFF_ID" />
+		<result property="updatedStaffId" column="UPDATED_STAFF_ID" />
+		<result property="dateCreated" column="DATE_CREATED" />
+		<result property="lastUpdated" column="LAST_UPDATED" />
+		<result property="orgProp" column="ORG_PROP" />
+		<result property="orgNmSpell" column="ORG_NM_SPELL" />
+		<result property="createdStaffNm" column="CREATED_STAFF_NM" />
+		<result property="updatedStaffNm" column="UPDATED_STAFF_NM" />
+		<result property="orgUuid2" column="ORG_UUID2" />
+		<result property="orgNm2" column="ORG_NM2" />
+		<result property="branchAttribution" column="BRANCH_ATTRIBUTION" />
+		<result property="orgRunProp" column="org_Run_Prop" />
+		<result property="orgRegistNum" column="org_Regist_Num" />
+		<result property="legalPersonNm" column="legal_Person_Nm" />
+		<result property="legalCard" column="legal_Card" />
+		<result property="registAddress" column="regist_Address" />
+		<result property="registCapitall" column="regist_Capitall" />
+		<result property="empOperationId" column="emp_Operation_Id" />
+		<result property="empCooperateManagerId" column="EMP_COOPERATEMANAGER_ID" />
+		<result property="empOperationDeptId" column="emp_Operation_Dept_Id" />
+		<result property="empCooperateManagerDeptId" column="EMP_COOPERATEMANAGER_DEPT_ID" />
+		<result property="expandNm" column="expand_Nm" />
+		<result property="expandNo" column="expand_No" />
+		<result property="signDate" column="sign_Date" />
+		<result property="breakSignDate" column="break_Sign_Date" />
+		<result property="idNumber" column="id_Number" />
+		<result property="bankAccount" column="bank_Account" />
+		<result property="accNumber" column="acc_Number" />
+		<result property="bankName" column="bank_Name" />
+		<result property="accOpenBranch" column="acc_Open_Branch" />
+		<result property="accProvince" column="acc_Province" />
+		<result property="accountCity" column="account_City" />
+		<result property="provideInvoice" column="provide_Invoice" />
+		<result property="hasStockBus" column="has_Stock_Bus" />
+		<result property="recipientName" column="recipient_Name" />
+		<result property="recipientNumber" column="recipient_Number" />
+		<result property="refundDepositTime" column="refund_Deposit_Time" />
+		<result property="mainContract" column="main_Contract" />
+		<result property="regionalAgency" column="regional_Agency" />
+		<result property="depositmarginReceivable" column="depositmargin_Receivable" />
+		<result property="paidDeposit" column="paid_Deposit" />
+		<result property="depositTime" column="deposit_Time" />
+		<result property="networkServiceFee" column="network_Service_Fee" />
+		<result property="agreementDate" column="agreement_Date" />
+		<result property="filingProtocolState" column="filing_Protocol_State" />
+		<result property="authorizedNameplate" column="authorized_Nameplate" />
+		<result property="branchAttributionName" column="branch_Attribution_Name" />
+		<result property="branchName" column="branchName"/>
+		<result property="agentLever" column="agent_Lever" />
+		<result property="backCardNum" column="back_Card_Num" />
+		<result property="empCooperateManagerNm" column="emp_Cooperate_Manager_nm" />
+		<result property="settlementAccountType" column="SETTLEMENT_ACCOUNT_TYPE" />
+		<result property="empNum" column="emp_Num" />
+		<result property="deptNum" column="dept_Num" />
+		<result property="orgChildNum" column="org_child_num" />
+		<result property="checkDiscount" column="CHECK_DISCOUNT" />
+		<result property="checkCut" column="CHECK_CUT" />
+		<result property="adminEmpNo" column="ADMIN_EMP_UUID" />
+		<result property="adminLoginId" column="admin_Login_Id" />
+		<result property="parentOrg" column="parent_Org" />
+		<result property="parentNm" column="parent_nm" />
+		<result property="virtualAccountId" column="VIRTUAL_ACCOUNT_ID" />
+		<result property="accountNo" column="ACCOUNT_NO" />
+		<result property="agentNumber" column="AGENT_NUMBER" />
+		<result property="prov" column="prov" />
+		<result property="areaNm" column="AREA_NM" />
+		<result property="leverNo" column="LEVER_NO" />
+		<result property="MAX_STORAGE_NUM" column="max_storage_num" />
+		<result property="authorizationAreaType" column="authorization_area_type"/>
+		<result property="isOfferInvoice" column="is_offer_invoice"/>
+		<result property="mercAgentTypes" column="MERC_AGENT_TYPES"/>
+		<!-- 对公结算相关信息 -->
+		<result property="settleAccount" column="SETTLE_ACCOUNT"/>
+		<result property="accountName" column="ACCOUNT_NAME"/>
+		<result property="cnapsCode" column="CNAPS_CODE"/>
+		<result property="openbankName" column="OPENBANK_NAME"/>
+		<result property="provNm" column="PROVINCE"/>
+		<!-- 机构编码及路径 -->
+		<result property="orgCode" column="ORG_CODE"/>
+        <result property="parentOrgCode" column="PARENT_ORG_CODE"/>
+        <result property="orgArch" column="ORG_ARCH"/>
+        
+        <!-- 优质商户 -->
+		<result property="expandMercType" column="EXPAND_MERC_TYPE"/>
+          
+        <!-- 敏感字段脱敏 -->
+        <result property="settleAccountEncrypt" column="SETTLE_ACCOUNT_ENCRYPT"/>
+        <result property="orgAccountNameEncrypt" column="ACCOUNT_NAME_ENCRYPT"/>
+        <result property="legalPersonNmEncrypt" column="LEGAL_PERSON_NM_ENCRYPT"/>
+        <result property="legalCardEncrypt" column="LEGAL_CARD_ENCRYPT"/>
+        <result property="mainContractEncrypt" column="MAIN_CONTRACT_ENCRYPT"/>
+        <result property="expandSmallMercType" column="EXPAND_SMALL_MERC_TYPE"/>
+		<result property="lbnkNm" column="LBNK_NM" />
+		<result property="lbnkNo" column="LBNK_NO"/>
+        <!-- 财务支撑系统分润模块 -->
+        <result property="deductionsDepositMargin" column="DEDUCTIONS_DEPOSITMARGIN"/>
+        <result property="baseProfitRatio" column="BASE_PROFIT_RATIO"/>
+        <result property="highProfitRatio" column="HIGH_PROFIT_RATIO"/>
+		<!-- 标志渠道商类型 -->
+		<result property="channelBusinessType" column="CHANNEL_BUSINESS_TYPE"/>
+
+	</resultMap>
+	
+
+	<select id="getTopAgent1Org" parameterType="java.lang.String" resultMap="Result">
+
+		SELECT
+		org.org_uuid,org.org_nm,PARENT_ORG
+		FROM ssp.t_uap_org org
+		START WITH org_uuid = #{orgUuid}
+		CONNECT BY PRIOR  org.org_uuid =  org.parent_org
+	</select>
+</mapper>
